@@ -1,6 +1,6 @@
 /*
  * File:   ee3102_final.c
- * Author: Raiyan Mahbub, Kothai Seelan, Erik Haag, Zixin Hu
+ * Author(s): Erik Haag, Zixin Hu, Raiyan Mahbub, Kothai Seelan
  *
  * Created on February 23, 2021, 4:17 PM
  */
@@ -79,8 +79,7 @@ void initBuffer(void) {
 /* Function to initialize 7-segment LED display */
 void initDisplay(void) {
     //AD1PCFG = 0x9fff;                 // Set all pins as digital
-    TRISB = 0b0000000001111111;         // Set RB15-RB8 to output
-    LATB = 0x03fc;                      // Set RB11 and RB 10 to low and set RB9-RB2 to high
+    LATB = 0x00f0;                      // Set RB4-RB7 low and RB8-RB15 to high
 }
 
 /* Function to initialize A/D Converter */
